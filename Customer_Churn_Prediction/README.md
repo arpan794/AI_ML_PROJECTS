@@ -41,4 +41,4 @@ uvicorn app.main:app --reload
 
 ### Run Frontend
 
-streamlit run frontend/streamlit_app.py
+streamlit run frontend/app.py
