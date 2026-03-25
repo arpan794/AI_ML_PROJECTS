@@ -1,7 +1,14 @@
+from dotenv import load_dotenv
 import streamlit as st
 import requests
+import os
 
-API_URL = "http://localhost:8000/predict"
+load_dotenv()
+
+API_URL = os.getenv("API_URL")
+
+# API_URL = "http://localhost:8000/predict"
+# API_URL = "http://host.docker.internal:8000/predict"
 
 st.title("Customer Churn Prediction")
 

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.schemas import CustomerData
-from app.model_loader import load_model
+from .schemas import CustomerData
+from .model_loader import load_model
 import pandas as pd
 
 app = FastAPI(title="Customer Churn API")

@@ -1,7 +1,7 @@
 import joblib
 import numpy as np
 
-model = joblib.load("models/best_model.pkl")
+model = joblib.load("models/churn_model.pkl")
 scaler = joblib.load("models/scaler.pkl")
 
 def predict(data):
