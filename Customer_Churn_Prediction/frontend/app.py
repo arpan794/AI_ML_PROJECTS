@@ -1,11 +1,15 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import streamlit as st
 import requests
 import os
 
-load_dotenv()
+# load_dotenv()
 
 API_URL = os.getenv("API_URL")
+
+if not API_URL:
+    st.error("API_URL not set in environment variables")
+    st.stop()
 
 # API_URL = "http://localhost:8000/predict"
 # API_URL = "http://host.docker.internal:8000/predict"
