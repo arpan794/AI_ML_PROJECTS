@@ -1,14 +1,14 @@
 services:
   backend:
-    build: ./backend
-    container_name: customer-churn-project-backend
+    # build: ./backend
+    image: arpan794/churn-backend:v1
     ports:
       - "8000:8000"
     restart: always
 
   frontend:
-    build: ./frontend
-    container_name: customer-churn-project-frontend
+    # build: ./frontend
+    image: arpan794/churn-frontend:v1
     ports:
       - "8501:8501"
     environment:
