@@ -1,5 +1,9 @@
-from streamlit import st
+import os
+import streamlit as st
 import requests
+
+API_URL = os.getenv("API_URL")
+# API_URL = "http://localhost:8000/translate"
 
 st.title("Movie Recommender")
 
@@ -14,7 +18,7 @@ if option == "Existing User":
 
     if st.button("Recommend"):
         response = requests.get(
-            f"http://localhost:8000/recommend/{user_id}"
+            f"{API_URL}/recommend/{user_id}"
         )
         st.write(response.json())
 
@@ -29,7 +33,7 @@ else:
     if st.button("Recommend Movies"):
 
         response = requests.post(
-            "http://localhost:8000/recommend-new-user",
+            f"{API_URL}/recommend-new-user",
             json=genres
         )
 
